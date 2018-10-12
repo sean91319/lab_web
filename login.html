@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登入</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <form action="login.php" method="post" name="login">
+        <div class="box">
+            <div class="welcome">Welcome!</div>
+            <br>
+            <div class="text">Please sign in to your account.</div>
+            <br>
+            <hr>
+            <div class="line">Username</div>
+            <br>
+            <input type="text" name="account">
+            <br>
+            <div class="line">Password <a class="forget" href="password1.html" style="text-decoration:none;">忘記密碼？</a></div>
+            <br>
+            <input type="password" name="password">
+            <br>
+            <!-- <a class="login" href="login.php" style="text-decoration:none;">Login</a> -->
+            <input type="submit" class="button" id="login" value="登入">
+        </div>
+        <div class="register">還沒註冊？<a class="signup" href="register.php" style="text-decoration:none;">  Sign up now !</a></div>
+    </form>
+</body>
+
+</html>
