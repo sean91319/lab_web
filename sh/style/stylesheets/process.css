@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* line 1, ../sass/process.sass */
+* {
+  font-family: 微軟正黑體;
+}
+
+/* line 5, ../sass/process.sass */
+body {
+  padding: 30px;
+  position: relative;
+}
+
+/* line 9, ../sass/process.sass */
+#errmessage {
+  position: absolute;
+  border: 1px solid #000;
+  height: 400px;
+  width: 600px;
+  top: 140px;
+  right: 200px;
+  color: green;
+  font-size: 20px;
+  background-color: black;
+  opacity: 0.9;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* line 24, ../sass/process.sass */
+ul {
+  padding: 0px;
+  display: inline-block;
+}
+/* line 27, ../sass/process.sass */
+ul li {
+  list-style: none;
+  width: 300px;
+  padding: 5px;
+}
+
+/* line 33, ../sass/process.sass */
+.list {
+  border: solid 3px #aaa;
+  width: 200px;
+  height: 140px;
+  color: #555;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+/* line 41, ../sass/process.sass */
+.done {
+  border: solid 3px green;
+  width: 200px;
+  height: 140px;
+  color: #555;
+  box-sizing: border-box;
+  margin: 10px;
+}
+/* line 49, ../sass/process.sass */
+.done:before {
+  content: " ✓ ";
+  color: green;
+}
+
+/* line 53, ../sass/process.sass */
+.fail {
+  border: solid 3px red;
+  width: 200px;
+  height: 140px;
+  color: #555;
+  box-sizing: border-box;
+  margin: 10px;
+}
+/* line 61, ../sass/process.sass */
+.fail:before {
+  content: " x ";
+  color: red;
+}

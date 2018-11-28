@@ -1,5 +1,5 @@
 <?php
-
+	ob_start();
 	function sendmail($To,$message){
 		require_once('./PHPMailer_5.2.2/class.phpmailer.php');
 	    $Email = $_POST['email'];
@@ -61,7 +61,7 @@
 
 			else{
 
-				echo "<script>alert('網路問題導致信件發送出現錯誤，請重新操作!');location.href='login.html'</script>"
+				echo "<script>alert('網路問題導致信件發送出現錯誤，請重新操作!');location.href='login.html'</script>";
 
 			}
 

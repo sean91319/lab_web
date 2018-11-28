@@ -1,0 +1,62 @@
+/* line 13, ../sass/confirm.sass */
+body {
+  background-color: #124559;
+}
+
+/* line 17, ../sass/confirm.sass */
+.box {
+  width: 300px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  font-family: Microsoft JhengHei;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 180px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  line-height: 10px;
+}
+
+/* line 33, ../sass/confirm.sass */
+.text {
+  font-size: 15px;
+  color: gray;
+}
+
+/* line 37, ../sass/confirm.sass */
+.line {
+  color: #124559;
+  text-align: left;
+  margin-top: 25px;
+}
+
+/* line 42, ../sass/confirm.sass */
+input {
+  border: solid 2px #D8D8D8;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* line 52, ../sass/confirm.sass */
+.button {
+  background-color: #598392;
+  color: #fff;
+  font-size: 18px;
+  font-family: Microsoft JhengHei;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  width: 300px;
+  height: 45px;
+}
+
+/* line 67, ../sass/confirm.sass */
+.button:hover {
+  background-color: #415F6B;
+}

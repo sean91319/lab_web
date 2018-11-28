@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>註冊</title>
-	<link rel="stylesheet" href="css/confirm.css">
+	<link rel="stylesheet" href="style/stylesheets/confirm.css">
 
 </head>
 
@@ -11,7 +11,8 @@
 <body>
 
 	<?php 
-		echo $_COOKIE["user"]
+
+		echo $_COOKIE["user"];
 	?>
 
 	<form action="confirmcheck.php" method="post" name="register" class="box">

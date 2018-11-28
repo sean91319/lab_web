@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); 	ob_start();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,7 @@
 </head>
 
 <?php
+
 
 	header('Content-Type: text/html; charset=utf-8');
 	$username=$_POST['account'];
@@ -28,20 +29,44 @@
 
 	// echo $username;
 	// echo $password;
-
+	$Firstlogin = "no";
+	$sql = "UPDATE `person` SET `Firstlogin` = '$Firstlogin'  WHERE `Nickname` = '$username'";
 	
 	if($username== $row[1] && $password==$row[3] && $row[8]=="yes"){
 
-		$_SESSION['username'] = $username;
+		if($row[9]=="yes"){
+			if ($mysqli->query($sql) === TRUE) {
+				$_SESSION['username'] = $username;
+				setcookie("username", $username, time()+3600)or die('unable to create cookie');
 
-		echo"<script>alert('登入成功！');location.href='index.php';</script>";
+				$mkdir1 = shell_exec("mkdir sh/$username");
+				$mkdir2 = shell_exec("mkdir sh/$username/json");
+
+
+				echo"<script>alert('歡迎第一次登入！');location.href='index.php';</script>";
+			}
+		}
+		else{
+
+			$_SESSION['username'] = $username;
+			setcookie("username", $username, time()+3600*7*24)or die('unable to create cookie');
+			
+			echo"<script>alert('登入成功！');location.href='index.php';</script>";
+
+		}
 
 
 		
 	}
 
 	elseif ($row[8]=="no") {
-		setcookie("user", $username, time()+3600);
+
+		// echo $username;
+
+		setcookie("user", $username, time()+3600*24*7)or die('unable to create cookie');
+
+		// echo $_COOKIE["user"];
+
 		echo"<script>alert('請先輸入信箱中的認證碼！');location.href='confirm.php';</script>";
 	}
 			

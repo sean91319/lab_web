@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS `person` (
   `Phone` varchar(11) NOT NULL,
   `Rand_Num` varchar(10) NOT NULL,
   `isConfirm` varchar(5) NOT NULL,
+  `Firstlogin` varchar(5) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`Email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

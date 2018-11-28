@@ -1,0 +1,144 @@
+/* line 13, ../sass/nav.sass */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+  background-color: #fff;
+}
+
+/* line 19, ../sass/nav.sass */
+ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+}
+
+/* line 24, ../sass/nav.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 27, ../sass/nav.sass */
+.topbar {
+  width: 100%;
+  height: 83px;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 0px 0px 0px 30px;
+  box-shadow: 3px 3px 10px 1px #ddd;
+}
+/* line 38, ../sass/nav.sass */
+.topbar .logo {
+  float: left;
+  margin-top: 15px;
+  font-family: "Teko", sans-serif;
+  color: #293241;
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+/* line 46, ../sass/nav.sass */
+.topbar .nav {
+  margin-right: 15px;
+}
+/* line 48, ../sass/nav.sass */
+.topbar .nav ul {
+  float: right;
+}
+/* line 50, ../sass/nav.sass */
+.topbar .nav ul li {
+  display: inline-block;
+}
+/* line 52, ../sass/nav.sass */
+.topbar .nav ul li .navitem {
+  margin-top: 10px;
+  color: #aaa;
+  display: block;
+  padding: 17px 20px;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* line 61, ../sass/nav.sass */
+.topbar .nav ul li .navitem.active {
+  color: #3D5A80;
+}
+/* line 63, ../sass/nav.sass */
+.topbar .nav ul li .navitem:hover {
+  color: #293241;
+}
+/* line 67, ../sass/nav.sass */
+.topbar .nav ul li .account {
+  height: 25px;
+  padding-top: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 100%;
+  margin-left: 30px;
+  margin-right: 20px;
+  background-color: #EE6C4D;
+  cursor: pointer;
+  color: white;
+}
+
+/* line 82, ../sass/nav.sass */
+.accspace {
+  display: none;
+  border: 1px solid #ccc;
+  position: fixed;
+  top: 3px;
+  right: 8px;
+  background-color: #fff;
+  width: 130px;
+  margin: 20px;
+  margin-top: 90px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  color: #888;
+}
+/* line 98, ../sass/nav.sass */
+.accspace ul {
+  list-style: none;
+  margin: 15px;
+  margin-left: 27px;
+}
+
+/* line 104, ../sass/nav.sass */
+.tri {
+  display: none;
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #ccc transparent;
+  right: 45px;
+  top: 64.1px;
+}
+
+/* line 115, ../sass/nav.sass */
+.trib {
+  display: none;
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  right: 45px;
+  top: 64.5px;
+}
+
+/* line 126, ../sass/nav.sass */
+.accitem {
+  cursor: pointer;
+}
+/* line 128, ../sass/nav.sass */
+.accitem:hover {
+  color: #293241;
+}

@@ -1,0 +1,129 @@
+$nav-color: #F7F7F7
+$home-color: #fff
+$upload-color: #E0FBFC
+$process-color: #EE6C4D
+$logo-color: #293241
+$now-color: #3D5A80
+$item-color: #aaa
+$border-color: #ccc
+
+*
+  // border: 1px solid #000
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Teko', sans-serif
+  background-color: $home-color
+
+ul,li
+  margin: 0
+  padding: 0
+  font-family: 'Teko', sans-serif
+  
+a
+  text-decoration: none
+
+.topbar
+  width: 100%
+  height: 83px
+  box-sizing: border-box
+  background-color: $nav-color
+  position: fixed
+  top: 0px
+  left: 0px
+  padding: 0px 0px 0px 30px
+  // border-bottom: 1px solid #ccc
+  box-shadow: 3px 3px 10px 1px #ddd
+  .logo
+    float: left
+    margin-top: 15px
+    font-family: 'Teko', sans-serif
+    color: $logo-color
+    font-size: 50px
+    letter-spacing: 3px
+    font-weight: 800
+  .nav
+    margin-right: 15px
+    ul
+      float: right
+      li
+        display: inline-block
+        .navitem
+          margin-top: 10px
+          color: $item-color
+          display: block
+          padding: 17px 20px
+          font-size: 30px
+          text-decoration: none
+          font-weight: bold
+          letter-spacing: 1px
+          &.active
+            color: $now-color
+          &:hover
+            color: $logo-color
+          
+            
+        .account
+          // border: 1px solid #000
+          height: 25px
+          padding-top: 4px
+          padding-left: 18px
+          padding-right: 18px
+          border-radius: 100%
+          margin-left: 30px
+          margin-right: 20px
+          background-color: $process-color
+          cursor: pointer
+          color: white
+
+
+          
+.accspace
+  display: none
+  border: 1px solid $border-color
+  position: fixed
+  top: 3px
+  right: 8px
+  background-color: #fff
+  width: 130px
+  margin: 20px
+  margin-top: 90px
+  font-size: 28px
+  letter-spacing: 1px
+  border-radius: 7px
+  color: #888
+  
+  
+  ul
+    list-style: none  
+    margin: 15px
+    margin-left: 27px
+    
+        
+.tri
+  display: none
+  position: fixed
+  width: 0
+  height: 0
+  border-width: 15px
+  border-style: solid
+  border-color: transparent transparent $border-color transparent
+  right: 45px
+  top: 64.1px
+  
+.trib
+  display: none
+  position: fixed
+  width: 0
+  height: 0
+  border-width: 15px
+  border-style: solid
+  border-color: transparent transparent #fff transparent
+  right: 45px
+  top: 64.5px
+  
+.accitem
+  cursor: pointer
+  &:hover
+    color: $logo-color

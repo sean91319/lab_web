@@ -3,16 +3,21 @@
 	session_start();
 
 	if ($_SESSION['username'] != NULL) {
+		echo "session---username: ";
 		echo $_SESSION['username'];
+		echo "<br>";
 	}
 
 	else{
-		echo "boooo";
+		echo "soooo";
 	}
 
 
-	if ($_COOKIE["user"] != NULL) {
-		echo $_COOKIE["user"];	
+	if ($_COOKIE["username"] != NULL) {
+		echo "cookie---username: ";
+		echo $_COOKIE["username"];
+		echo "<br>";
+
 	}
 	else{
 		echo "coooo";
