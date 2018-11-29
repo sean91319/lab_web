@@ -26,6 +26,10 @@
 	}
 
 	
+	$username=$_COOKIE["username"];
+	echo "<script>\r\n"; 
+	echo "username=\"$username\";\r\n"; 
+	echo "</script>\r\n"; 
 
 
  ?>
@@ -53,9 +57,9 @@
 	  <div class="nav">
 	    <ul>
 	      <li><a class="navitem link-1" href="../">Home</a></li>
-	      <li><a class="navitem link-2 active" href="sh/index.php">Process</a></li>
+	      <li><a class="navitem link-2 active" href="">Process</a></li>
 	      <li><a class="navitem link-3" href="http://120.126.142.147:8181">Gitlab</a></li>
-	      <li><span class="navitem account">S</span></li>
+	      <li><span class="navitem account" id="accname">S</span></li>
 	    </ul>
 	  </div>
 	</div>
@@ -71,13 +75,14 @@
 	
 	<script>
 		$(document).ready(function(){
-	    $(".account").click(
-	    function(){
-	      $(".user").toggle();
-	    }
-	  );
-	  
-	});
+		    $(".account").click(
+			    function(){
+			      $(".user").toggle();
+			    }
+		  	);
+		});
+
+		$("#accname").text(username.substr(0,1));
 	</script>
 
 	<br><br><br>

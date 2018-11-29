@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/* line 1, ../sass/process.sass */
-* {
-  font-family: 微軟正黑體;
-}
-
 /* line 5, ../sass/process.sass */
 body {
   padding: 30px;
@@ -16,7 +11,7 @@ body {
   border: 1px solid #000;
   height: 400px;
   width: 600px;
-  top: 140px;
+  top: 260px;
   right: 200px;
   color: green;
   font-size: 20px;
@@ -25,18 +20,6 @@ body {
   padding: 10px 30px;
   box-sizing: border-box;
   overflow: auto;
-}
-
-/* line 24, ../sass/process.sass */
-ul {
-  padding: 0px;
-  display: inline-block;
-}
-/* line 27, ../sass/process.sass */
-ul li {
-  list-style: none;
-  width: 300px;
-  padding: 5px;
 }
 
 /* line 33, ../sass/process.sass */

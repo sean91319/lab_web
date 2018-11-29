@@ -16,12 +16,20 @@
 
 	else
 		echo $_SESSION['username'];
+
+
+
+	$username=$_COOKIE["username"];
+	echo "<script>\r\n"; 
+	echo "username=\"$username\";\r\n"; 
+	echo "</script>\r\n"; 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>524LAB</title>
 	<link rel="stylesheet" href="style/stylesheets/nav.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko">
 	<script src="jquery.js"></script>
@@ -36,7 +44,7 @@
 	      <li><a class="navitem link-1 active" href="#home">Home</a></li>
 	      <li><a class="navitem link-2" href="sh/index.php">Process</a></li>
 	      <li><a class="navitem link-3" href="http://120.126.142.147:8181">Gitlab</a></li>
-	      <li><span class="navitem account">S</span></li>
+	      <li><span class="navitem account" id="accname">S</span></li>
 	    </ul>
 	  </div>
 	</div>
@@ -52,13 +60,15 @@
 	
 	<script>
 		$(document).ready(function(){
-	    $(".account").click(
-	    function(){
-	      $(".user").toggle();
-	    }
-	  );
-	  
-	});
+		    $(".account").click(
+			    function(){
+			      $(".user").toggle();
+			    }
+		  	);
+		});
+
+		$("#accname").text(username.substr(0,1));
+
 	</script>
 
 	
