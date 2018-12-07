@@ -3,6 +3,10 @@
 	error_reporting(0);
 	session_start();
 
+	$userProcess = $_COOKIE["userProcess"];
+	$userProcessLocation = $_COOKIE["userProcessLocation"];
+
+
 	if(isset($_SESSION['username'])==FALSE) {
 
 		ob_start();
@@ -14,16 +18,49 @@
 
 	}
 
+
 	else{
-		echo "Hi, ";
-		echo $_SESSION["username"];
-		echo "<br><br><br>";
-		$username = $_SESSION["username"];
-		$process_url = "http://localhost:8888/lab_web/sh/json.php?type=get&name=processname";
-		echo "<script>\r\n"; 
-		echo "process_url=\"$process_url\";\r\n"; 
-		echo "</script>\r\n"; 
+
+
+		if($_COOKIE["userProcess"]!=NULL){
+
+
+			ob_start();
+		
+			echo"<script>alert('已執行！');</script>";
+
+			$loc = $userProcessLocation."/process.php";
+
+ 			header("Location: $loc");
+			
+	 		exit();
+		}
+		else{
+			echo "<br><br><br><br><br>";
+			// echo"<script>alert('無已執行的程序！');</script>";
+		}
+
+
+
+			echo "<br>";
+			echo "Hi, ";
+			echo $_SESSION["username"];
+			$username = $_SESSION["username"];
+			$process_url = "http://localhost:8888/lab_web/sh/json.php?type=get&name=processname";
+			echo "<script>\r\n"; 
+			echo "process_url=\"$process_url\";\r\n"; 
+			echo "</script>\r\n"; 
+
+
 	}
+
+////////-----------------------------------------------------------------------///////
+
+
+
+
+////////-----------------------------------------------------------------------///////
+
 
 	
 	$username=$_COOKIE["username"];
@@ -126,6 +163,7 @@
 				</li> -->
 			</ul>
 		</div>
+		<iframe name="iframe_a" id="iframe" frameborder="0" style="width: 500px; height: 500px; margin: 30px; border: solid 3px #aaa;"></iframe>
 	</div>
 
 
@@ -161,31 +199,51 @@
 			}
 			);
 
-		var process_template = "<li><a href='{{link}}?id={{id}}'>{{name}}</a></li>"
+		var process_template = "<li id={{id1}}><a class='past_script' href='{{link1}}?id={{id2}}'>{{name}}</a><a class='view' href='text_display.php?id={{iframe_id}}' target='iframe_a'>View</a><a href='{{link2}}?id={{delitem}}' id={{del_id}} data-del-id='{{delid}}' class='del_btn'>x</a></li>";
+		var data=[];
 
-		$.ajax(
-			{
-				url: process_url,
-				success: function(res){
+		$.ajax({
+			url: process_url,
+			success: function(res){
 
-					data=JSON.parse(res);
+				data=JSON.parse(res);
+				showlist();
 
-					for(i=0;i<data.length;i++){
-
-						var item=data[i];
-
-						var now_process = process_template.replace("{{name}}", data[i].process_name)
-														  .replace("{{id}}", data[i].process_name)
-														  .replace("{{link}}", "pline.php");
-
-						$("#process_list").append(now_process);
-
-
-					}
-
-				}
 			}
-		)
+		});
+
+		function showlist(){
+
+			for(i=0;i<data.length;i++){
+
+				var item=data[i];
+				var item_id=data[i].process_name;
+				var del_item_id="del_item_"+i;
+
+				var now_process = process_template.replace("{{name}}", item_id)
+												  .replace("{{id1}}", item_id)
+												  .replace("{{id2}}", item_id)
+												  .replace("{{del_id}}", del_item_id)
+												  .replace("{{delid}}", i)
+												  .replace("{{link1}}", "pline.php")
+												  .replace("{{link2}}", "del_script.php")
+												  .replace("{{delitem}}", item_id)
+												  .replace("{{iframe_id}}", item_id);
+
+
+
+				$("#process_list").append(now_process);
+
+			}
+
+		}
+
+		showlist();
+
+
+		//
+		
+
 
 
 	</script>

@@ -63,14 +63,14 @@
 	setcookie("userProcess",$userProcess,time()+3600*24*7);
 	setcookie("userProcessLocation",$user_json_file,time()+3600*24*7);
 
-	set_time_limit(0);
-	header ( 'Connection: close' );
-	ob_start ();
-	header ( 'Content-Length: 0' );
-	header( "Location: $url" );
-	ob_end_flush ();
-	flush ();
-	ignore_user_abort(true);
+	// set_time_limit(0);
+	// header ( 'Connection: close' );
+	// ob_start ();
+	// header ( 'Content-Length: 0' );
+	// header( "Location: $url" );
+	// ob_end_flush ();
+	// flush ();
+	// ignore_user_abort(true);
 
 	//----------------------------------------------------//
 
@@ -188,7 +188,7 @@
 
 		$exe = shell_exec($step[$i]."2>&1");  	//--------執行各項步驟
 
-		// echo $exe;
+		echo $exe;
 
 		$exe_print = [
 			"stepname" => $step_name[$i],

@@ -1,0 +1,7 @@
+網站部署到 Linux Server
+
+1. 將所有mysqli_connect的帳號密碼換成server上mysql的帳密
+2. 將所有ajax的url換成server的ip
+3. scp 到 server 上
+4. 把整個網站移至 /var/www/html
+5. 

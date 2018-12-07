@@ -10,6 +10,7 @@
 
 	else{
 		echo "soooo";
+		echo "<br>";
 	}
 
 
@@ -21,5 +22,33 @@
 	}
 	else{
 		echo "coooo";
+		echo "<br>";
 	}
+
+	if ($_COOKIE["userProcess"] != NULL) {
+		echo "cookie---userProcess: ";
+		echo $_COOKIE["userProcess"];
+		echo "<br>";
+
+	}
+	else{
+		echo "NONONONOuserProcess";
+		echo "<br>";
+	}
+
+	if ($_COOKIE["userProcessLocation"] != NULL) {
+		echo "cookie---userProcessLocation: ";
+		echo $_COOKIE["userProcessLocation"];
+		echo "<br>";
+
+	}
+	else{
+		echo "NONONONOuserProcessLocation";
+		echo "<br>";
+	}
+
+	echo $_COOKIE["userProcessLocation"];
+
+
+
 ?>

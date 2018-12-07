@@ -20,3 +20,30 @@ li {
   height: 200px;
   font-size: 30px;
 }
+
+/* line 16, ../sass/script.sass */
+.past_script {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 20, ../sass/script.sass */
+.view {
+  display: inline-block;
+  margin-left: 50px;
+  color: green;
+  font-size: 20px;
+}
+
+/* line 26, ../sass/script.sass */
+.del_btn {
+  display: inline-block;
+  padding: 0px 6px;
+  cursor: pointer;
+  color: black;
+}
+/* line 31, ../sass/script.sass */
+.del_btn:hover {
+  background-color: #ff3d4a;
+  color: #fff;
+}

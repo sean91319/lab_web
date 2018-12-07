@@ -108,12 +108,12 @@
 
 	</script>
 
-	<br><br><br>
-<br><br><br>
+	<br><br><br><br><br><br>
 	
 	<div class="container">
 
 		<h2 id="title">執行進度</h2>
+		<a href="../../../del_process.php" id="del_this">結束此程序並執行新的程序</a>
 		<hr>
 		<ul id="errmessage"></ul>
 		<ul id="list"></ul>

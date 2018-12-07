@@ -1,1 +1,0 @@
-[{"total_steps":3,"stepScript":"sh program\/one.sh ","stepName":"shOne","scriptFile":"HELLO"},{"total_steps":3,"stepScript":"sh program\/two.sh ","stepName":"shTwo","scriptFile":"HELLO"},{"total_steps":3,"stepScript":"","stepName":"","scriptFile":"HELLO"}]
