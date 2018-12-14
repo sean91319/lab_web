@@ -1,0 +1,8 @@
+/* line 4, ../sass/text_display.sass */
+.btn {
+  border: 1px solid;
+  padding: 3px;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -24,8 +24,8 @@
 		if ($total_steps!=0 && $total_steps!=1) {
 
 			if ($total_steps%2 == 1) {  //把script寫入$step的array
-			$step[$step_num]=$$key;
-			$step_num++;
+				$step[$step_num]=$$key;
+				$step_num++;
 
 			}
 			elseif ($total_steps%2 == 0) {  //把step名稱寫入$step_name的array
@@ -63,14 +63,14 @@
 	setcookie("userProcess",$userProcess,time()+3600*24*7);
 	setcookie("userProcessLocation",$user_json_file,time()+3600*24*7);
 
-	// set_time_limit(0);
-	// header ( 'Connection: close' );
-	// ob_start ();
-	// header ( 'Content-Length: 0' );
-	// header( "Location: $url" );
-	// ob_end_flush ();
-	// flush ();
-	// ignore_user_abort(true);
+	set_time_limit(0);
+	header ( 'Connection: close' );
+	ob_start ();
+	header ( 'Content-Length: 0' );
+	header( "Location: $url" );
+	ob_end_flush ();
+	flush ();
+	ignore_user_abort(true);
 
 	//----------------------------------------------------//
 
@@ -135,21 +135,6 @@
 	file_put_contents($json_process_location, $newdata);
 
 
-	echo "程式執行中...<br>";
-	echo "<script type='text/javascript'>";
-	echo "window.location.href='$url'";
-	// echo "setTimeout('window.location.href='$url'',3000);";
-	echo "</script>"; 
-
-
-	ini_set('output_buffering', 0);
-	ini_set('zlib.output_compression', 0);
-	if( !ob_get_level() ){ ob_start(); }
-	else { ob_end_clean(); ob_start(); }
-
-	flush();
-	ob_flush();
-	sleep(1);
 
 	//////////////////--------------------執行程式-----------------------//////////////////
 	

@@ -199,7 +199,9 @@
 			}
 			);
 
-		var process_template = "<li id={{id1}}><a class='past_script' href='{{link1}}?id={{id2}}'>{{name}}</a><a class='view' href='text_display.php?id={{iframe_id}}' target='iframe_a'>View</a><a href='{{link2}}?id={{delitem}}' id={{del_id}} data-del-id='{{delid}}' class='del_btn'>x</a></li>";
+		///////
+
+		var process_template = "<li id={{id1}} class='lll'><a class='past_script' href='{{link1}}?id={{id2}}'>{{name}}</a><a class='view' href='text_display.php?id={{iframe_id}}' target='iframe_a'>View</a><a href='{{link2}}?id={{delitem}}' id={{del_id}} data-del-id='{{delid}}' class='del_btn'>x</a></li>";
 		var data=[];
 
 		$.ajax({

@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +11,24 @@
 </head>
 <body>
 	
-	<!-- <div class="a">qq</div> -->
-	<div id="demo">demo</div>
-	
-<?php 
+	<form action="scan.php" target="iframe_a" id="form">
+		
+		<div>
+			執行的資料夾名稱：<input type="text" name="file" id="file">
+		</div>
+		<br>
+		<div>
+			要打開的檔案：<input type="text" name="id" id="id">
+		</div>
 
-	$value="abc"; 
-	$data=array("aqefe","bqefqefq","cqefqef");
-	echo $data[1];
-	echo "<script>\r\n"; 
-	echo "value=\"$data\";\r\n"; 
-	echo "</script>\r\n"; 
- ?>
+		<input type="submit">
+
+	</form>
+	
+	<iframe name="iframe_a" src="" frameborder="0" style="width: 500px; height: 500px; margin: 30px; border: solid 3px #aaa;"></iframe>
 
  <script>
 
-		$("#demo").text(value[1]);
 
  </script>
 
